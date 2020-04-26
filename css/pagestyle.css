@@ -1,0 +1,19 @@
+.btn-pageStyle{
+    background: #37669c;
+    border-style:solid;
+    border-radius: 5px;
+    border-width:1px;
+    padding: 8px 15px;
+    letter-spacing: 0.02em;
+    border-color: #F1F1F1
+}
+
+.btn-pageStyle:hover{
+    background:#a16e42;
+    color: #2a3342;
+  }
+
+  .btn-pageStyle:focus{
+    background:#a16e42;
+    color: #2a3342;
+}

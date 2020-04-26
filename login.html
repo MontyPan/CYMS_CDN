@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>登入</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom CSS -->
+	<link href="css/pageStyle.css" rel='stylesheet' type='text/css' />
+
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+	<!-- Custom CSS -->
+	<link href="css/cyms_login.css" rel='stylesheet' type='text/css' />
+
+	<!-- font-awesome icons CSS -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons CSS-->
+
+	<!-- side nav css file -->
+	<link href='css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css' />
+	<!-- //side nav css file -->
+
+	<!-- js-->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+
+	<!--webfonts-->
+	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	<!--//webfonts-->
+
+	<!-- chart -->
+	<script src="js/Chart.js"></script>
+	<!-- //chart -->
+
+	<!-- Metis Menu -->
+	<script src="js/metisMenu.min.js"></script>
+	<link href="css/custom.css" rel="stylesheet">
+	<!--//Metis Menu -->
+
+	<script src="js/setting.js"></script>
+	<script src="js/custom.js"></script>
+	
+	<!-- index page sales reviews visitors pie chart -->
+
+	<!-- requried-jsfiles-for owl -->
+	<!-- <script src="js/modal.js" type="text/javascript"></script>
+	<link href="css/modal.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/numPad.css">
+	<script type="text/javascript" src='js/jquery-1.12.4.min.js'></script>
+	<script type="text/javascript" src="js/numKeyBoard.js"></script> -->
+	<!-- //requried-jsfiles-for owl -->
+
+	<script src="js/DontCareCommon.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.messagestore.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.parser.min.js"></script>
+
+	<style>
+		body{
+			width:100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			background-image: url("images/Background-01.png");
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+		}
+		.login{
+			position: fixed;
+			left: 50%;
+			top:50%;
+			transform: translate(-50%,-50%);
+			background: rgba(0, 0, 0, 0.5);
+			text-align: center;
+			color: #fff;
+			font-family: "微軟正黑體",sans-serif;
+			border-radius: 10px;
+			padding: 30px;
+		}
+		.login i{
+			font-size: 100px;
+			margin: 20px auto;
+		}
+		input[type="text"],input[type="password"], #language {
+			font-size: 16px;
+			font-family: "SourceHanSansCN-Bold.otf",sans-serif;
+			margin: 5px auto;
+			border-radius: 4px;
+			color: #0364b8;
+			margin: 0 auto;
+			display: block;
+			width: 100%;
+		}
+		button{
+			border: 0;
+			padding:  6px 12px;
+			margin: 20px auto;
+			font-size: 2vmax;
+			font-family: "SourceHanSansCN-Bold.otf",sans-serif;
+			background: #fff;
+			border-radius: 4px;
+			color: #0364b8;
+			width: 100%;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		}
+		.wechat{
+			border: 0;
+			padding:  6px 12px;
+			margin-top: 0px;
+			font-size: 18px;
+			font-family: "SourceHanSansCN-Bold.otf",sans-serif;
+			background: rgb(45, 231, 54);
+			color: #000;
+			border-radius: 4px;
+			width: 100%;
+		}
+		@media (max-width:450px){
+			.login{
+				width: 70%;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<form class="login">
+		<h1 style="margin-bottom: 30px;" data-i18n="account_login"></h1>
+
+		<h2 data-i18n="language"></h2>
+		<select id="language" class="form-control" style="padding: 10px; height: 44px"></select>
+		<hr>
+		<h2 data-i18n="account"></h2>
+		<input id="account" type="text" style="padding: 10px;">
+		<div style="margin: 15px;"></div>
+		<h2 data-i18n="password"></h2>
+		<input id="password" type="password" style="padding: 10px;">
+		<button type="button" onclick="login();" data-i18n="login"></button>
+		<!-- <button type="submit" class="wechat"><img src="images/wechat.png" width="30px">微信登入</button> -->
+		<button id="register" type="button" onclick="window.location.href='register.html'" style="margin-top: 10px;" data-i18n="register"></button>
+	</form>
+
+	<div style="position: absolute; top: 5px; right: 5px; color: #bbbbbb;"> v1.5.0 </div>
+
+	<!-- Classie -->
+	<!-- for toggle left push menu script -->
+	<script src="js/classie.js"></script>
+	<script>
+		var menuLeft = document.getElementById('cbp-spmenu-s1'),
+			showLeftPush = document.getElementById('showLeftPush'),
+			body = document.body;
+
+		showLeftPush.onclick = function () {
+			classie.toggle(this, 'active');
+			classie.toggle(body, 'cbp-spmenu-push-toright');
+			classie.toggle(menuLeft, 'cbp-spmenu-open');
+			disableOther('showLeftPush');
+		};
+
+
+		function disableOther(button) {
+			if (button !== 'showLeftPush') {
+				classie.toggle(showLeftPush, 'disabled');
+			}
+		}
+	</script>
+	<!-- //Classie -->
+	<!-- //for toggle left push menu script -->
+
+	<!--scrolling js-->
+	<script src="js/jquery.nicescroll.js"></script>
+	<script src="js/scripts.js"></script>
+	<!--//scrolling js-->
+
+	<!-- side nav js -->
+	<script src='js/SidebarNav.min.js' type='text/javascript'></script>
+	<script>
+		$('.sidebar-menu').SidebarNav()
+	</script>
+	<!-- //side nav js -->
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.js"> </script>
+	<!-- //Bootstrap Core JavaScript -->
+
+	<script src="js/md5.min.js"></script>
+
+	<script type="text/javascript">
+		var openid = "";
+		var type = "";
+
+		$(document).ready(function() {
+			prepareI18N(customI18N);
+
+			for (var locale in language) {
+				$("#language").append(
+					"<option value='" + locale + "'" + 
+					(locale == dontCare.decideLocale() ? "selected" : "" ) + 
+					">" + language[locale] + "</option>"
+				);
+			}
+
+			$("#language").change(
+				function() {
+					localStorage.setItem(storageItem.locale, $( "#language option:selected" ).val());
+					//避免 URL 的 query string 有帶 locale 導致 decideLocale() 蓋過上一行的設定
+					//當然，這邊賭的是沒有其他 query string...... [逃]
+					location.href = "login.html";	
+				}
+			);
+
+			//legacy code
+           	var url = new URL(window.location.href);
+            openid = url.searchParams.get("openid");
+            type = url.searchParams.get("type");
+            if(openid != undefined && openid != null && openid != "" && type != undefined && type != null && type != "") {
+            	console.log(openid);
+            	console.log(type);
+        	}
+			if(getLocalStorageItem("acc") !== "")
+        		$("#account").val(getLocalStorageItem("acc"));
+        	if(getLocalStorageItem("psw") !== "")
+        		$("#password").val(getLocalStorageItem("psw"));
+        	if(getLocalStorageItem("acc") !== "" && getLocalStorageItem("psw") !== "") {
+        		var account = $("#account").val().trim();
+            	var password = $("#password").val().trim();
+        		if(account !== "" && password !== "") {
+        			login();
+        		}
+        	}
+        });
+
+		function customI18N() {
+			$("#password").attr({placeholder : $.i18n("password_placeholder")});
+			$("#account").attr({placeholder : $.i18n("account_placeholder")});
+		}
+
+        function login() {
+            var account = $("#account").val().trim();
+            var password = $("#password").val().trim();
+            if(account === "" || password === "") {
+                alert($.i18n("account_password_empty"));
+            }
+            else {
+                var sJson = JSON.stringify
+                ({
+                    account: account,
+                    password: md5(password),
+                    project: "cyms",
+                    role: "client",
+                    openid: openid,
+                    role_type: type
+                });
+                $.ajax({
+                    type: "POST",
+                    data: { "requestObject": sJson },
+                    dataType: "json",
+                    url: api_url + "/cyms/login.php",
+                    success: function (data) {
+                    	console.log(data);
+                        if(data.objects.length > 0) {
+                            var uid, acc, name, gender, vip_tag, imgurl, ID, phone;
+                            $.each(data.objects, function (index, element) {
+                                role = element.role;
+                                uid = element.uid;
+                                acc = element.acc;
+                                name = element.name;
+                                gender = element.gender;
+                                vip_tag = element.vip_tag;
+                                imgurl = element.imgurl;
+                                ID = element.ID;
+                                phone = element.phone;
+                                setLocalStorageItem("role", element.role);
+                                setLocalStorageItem("manage_oid", element.manage_oid);
+                                setLocalStorageItem("o_name", element.o_name);
+                                console.log(element);
+                            });
+                            if(role === "4") {
+                            	var org_vip_tag = getLocalStorageItem("patient_vip_tag");
+                                setLocalStorageItem("uid", uid);
+                                setLocalStorageItem("patient_uid", uid);
+                                setLocalStorageItem("acc", acc);
+                                setLocalStorageItem("patient_acc", acc);
+                                setLocalStorageItem("psw", password);
+                                setLocalStorageItem("name", name);
+                                setLocalStorageItem("patient_name", name);
+                                setLocalStorageItem("gender", gender);
+                                setLocalStorageItem("patient_gender", gender);
+                                setLocalStorageItem("patient_vip_tag", vip_tag);
+                                setLocalStorageItem("patient_img_url", imgurl);
+                                setLocalStorageItem("patient_ID", ID);
+                                setLocalStorageItem("patient_phone", phone);
+                                setLocalStorageItem("frompage", "normal");
+
+                                window.setTimeout( function(){
+                                	if(org_vip_tag !== getLocalStorageItem("patient_vip_tag")) {
+                                		window.location = "./userChangeNotice.html?org_vip=" + org_vip_tag;
+                                	}
+                                	else {
+                                		if(getLocalStorageItem(getLocalStorageItem("uid") + "_notice") === "yes") {
+	                                        window.location = "./Home.html";
+	                                    }
+	                                    else {
+	                                        window.location = "./userNotice.html";
+	                                    }
+                                	}
+                                }, 100 );
+
+                            }
+                        }
+                        else {
+                            alert($.i18n("account_password_error"));
+                        }
+                    },
+                });
+            }
+        }
+	</script>
+</body>
+
+</html>

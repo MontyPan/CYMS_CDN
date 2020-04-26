@@ -1,0 +1,28 @@
+input[type='radio'], input[type='checkbox'] {
+    transform: scale(2); 
+    margin-top: 10px;
+}
+
+.score-div {
+    background-color: #B94FFF;
+    height: 5vmax;
+    width: 5vmax;
+    border-radius: 50%;
+    font-size: 3vmax;
+    color: white;
+    text-align: center;
+    /* position: absolute; */
+    /* top: 5px; */
+    /* right: 5px; */
+    padding-top: 8px;
+    /* z-index:1000; */
+}
+
+.btn-home {
+    width: 7vmax;
+    height: 7vmax;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    z-index:1000;
+}

@@ -1,0 +1,56 @@
+td, th {
+    padding: 5px;
+}
+
+thead td {
+    border: solid thin;
+    height: 1.4em;
+    width: 10em;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+}
+
+tbody td {
+    color: rgba(0, 0, 0, 1);
+    border: solid thin;
+    height: 1.4em;
+    width: 500px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+}
+
+.nthumb {
+    float: left; /* must be floated for same cross browser position of larger image */
+    position: relative;
+    margin: 3px;
+    color: black;
+}
+
+.thumb {
+    float: left; /* must be floated for same cross browser position of larger image */
+    position: relative;
+    margin: 3px;
+    color: black;
+}
+
+.thumb img {
+    vertical-align: bottom;
+}
+
+.thumb:hover {
+    border: 0; /* IE6 needs this to show large image */
+    z-index: 1;
+}
+
+.thumb span {
+    position: absolute;
+    visibility: hidden;
+}
+
+.thumb:hover span {
+    visibility: visible;
+    top: 50px;
+    left: -200px;
+}

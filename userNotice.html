@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>用户注册须知</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <meta HTTP-EQUIV="expires" CONTENT="0">
+    <script
+        type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom CSS -->
+    <link href="css/pageStyle.css" rel='stylesheet' type='text/css' />
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+    <!-- Custom CSS -->
+    <link href="css/healthCheck_style.css" rel='stylesheet' type='text/css' />
+
+    <!-- font-awesome icons CSS -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons CSS-->
+
+    <!-- side nav css file -->
+    <link href='css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css' />
+    <!-- //side nav css file -->
+
+    <!-- js-->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+
+    <!--webfonts-->
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext"
+        rel="stylesheet">
+    <!--//webfonts-->
+
+    <script src="js/custom.js"></script>
+    <link href="css/custom.css" rel="stylesheet">
+    
+    <!-- HOMKE CSS -->
+    <style>
+        .text {
+            font-size: 3vmax;
+        }
+
+        .a-bg {
+            width: 90%;
+        }
+
+        .login{
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #fff;
+            font-family: "微軟正黑體",sans-serif;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .login i{
+            font-size: 100px;
+            margin: 20px auto;
+        }
+        .before_title{
+            font-size: 2vmax; 
+            color: #555;
+            font-family: Microsoft JhengHei;
+        }
+        .title_text {
+            font-size: 2.5vmax; 
+            color: #555; 
+            border: 2px;
+            font-family: Microsoft JhengHei;
+        }
+        .context{
+            font-size: 2vmax; 
+            color: #555;
+            font-family: Microsoft JhengHei;
+        }
+    </style>
+
+    <script src="js/DontCareCommon.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.messagestore.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.parser.min.js"></script>
+    <script>
+        //因為這一頁的文字其他地方幾乎都用不到，所以不搞 prepareI18N 那一套
+        //而是自己載入自行定義的字典檔
+        const dict_zh_cn = {
+            line1 : "  本软件尊重并保护所有使用服务用户的个人隐私权。为了给您提供更准确、更有个性化的服务，本软件会按照本隐私权政策的规定使用和披露您的个人信息。但本软件将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本软件不会将这些信息对外披露或向第三方提供。本软件会不时更新本隐私权政策。您在同意本软件服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本软件服务使用协议不可分割的一部分。",
+            line2 : "①适用范围",
+            line3 : "  a)在您使用本软件网络服务，本软件自动接收并记录的您的手机上的信息，包括但不限于您的健康数据、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据；",
+            line4 : "②信息的使用",
+            line5 : "  a)在获得您的数据之后，本软件会将其上传至服务器，以生成您的排行榜数据，以便您能够更好地使用服务。",
+            line6 : "③信息披露",
+            line7 : "  a)本软件不会将您的信息披露给不受信任的第三方。",
+            line8 : "  b)根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；",
+            line9 : "  c)如您出现违反中国有关法律、法规或者相关规则的情况，需要向第三方披露；",
+            line10 : "④信息存储和交换",
+            line11 : "  本软件收集的有关您的信息和资料将保存在本软件及（或）其关联公司的服务器上，这些信息和资料可能传送至您所在国家、地区或本软件收集信息和资料所在地的境外并在境外被访问、存储和展示。",
+            line12 : "⑤信息安全",
+            line13 : "  a)在使用本软件网络服务进行网上交易时，您不可避免的要向交易对方或潜在的交易对方披露自己的个人信息，如联络方式或者邮政地址。请您妥善保护自己的个人信息，仅在必要的情形下向他人提供。如您发现自己的个人信息泄密，请您立即联络本软件客服，以便本软件采取相应措施。",
+            
+            modal_title : "同意须知",
+            modal1 : "如您同意上述内容，请点击同意并进入本系统完善个人基本信息等资料，请确保信息准确、完整，如个人信息变动，请您及时与健康管理护士联系进行变更。",
+
+            agree : "同　意",
+            confirm : "确认",
+        };
+        const dict_zh_tw = {
+            line1 : "  本軟體尊重並保護所有使用服務用戶的個人隱私權。為了給您提供更準確、更有個性化的服務，本軟體會按照本隱私權政策的規定使用和披露您的個人訊息。但本軟體將以高度的勤勉、審慎義務對待這些訊息。除本隱私權政策另有規定外，在未徵得您事先許可的情況下，本軟體不會將這些訊息對外披露或向第三方提供。本軟體會不時更新本隱私權政策。您在同意本軟體服務使用協議之時，即視為您已經同意本隱私權政策全部內容。本隱私權政策屬於本軟體服務使用協議不可分割的一部分。",
+            line2 : "①適用範圍",
+            line3 : "  a)在您使用本軟體網絡服務，本軟體自動接收並記錄的您的手機上的訊息，包括但不限於您的健康數據、使用的語言、訪問日期和時間、軟硬件特徵訊息及您需求的網頁記錄等數據；",
+            line4 : "②訊息的使用",
+            line5 : "  a)在獲得您的數據之後，本軟體會將其上傳至服務器，以生成您的排行榜數據，以便您能夠更好地使用服務。",
+            line6 : "③訊息披露",
+            line7 : "  a)本軟體不會將您的訊息披露給不受信任的第三方。",
+            line8 : "  b)根據法律的有關規定，或者行政或司法機構的要求，向第三方或者行政、司法機構披露；",
+            line9 : "  c)如您出現違反中國有關法律、法規或者相關規則的情況，需要向第三方披露；",
+            line10 : "④訊息存儲和交換",
+            line11 : "  本軟體收集的有關您的訊息和資料將保存在本軟體及（或）其關聯公司的服務器上，這些訊息和資料可能傳送至您所在國家、地區或本軟體收集訊息和資料所在地的境外並在境外被訪問、存儲和展示。",
+            line12 : "⑤訊息安全",
+            line13 : "  a)在使用本軟體網絡服務進行網上交易時，您不可避免的要向交易對方或潛在的交易對方披露自己的個人訊息，如聯絡方式或者郵政地址。請您妥善保護自己的個人訊息，僅在必要的情形下向他人提供。如您發現自己的個人訊息洩密，請您立即聯絡本軟體客服，以便本軟體採取相應措施。",
+            
+            modal_title : "同意須知",
+            modal1 : "如您同意上述內容，請點擊同意並進入本系統完善個人基本訊息等資料，請確保訊息準確、完整，如個人訊息變動，請您及時與所屬管理員聯繫進行變更。",
+
+            agree : "同　意",
+            confirm : "確認",
+        };
+        const dict_ko = {
+            line1 : "  본 소프트웨어는 서비스를 이용하는 모든 사용자의 개인 프라이버시를 존중하고 보호합니다.귀하에게 보다 정확하고 개성적인 서비스를 제공하기 위해 본 소프트웨어는 귀하의 개인 정보를 본 프라이버시 정책의 규정에 따라 사용하고 공개합니다.단, 본 소프트웨어는 고도의 근면성, 신중성으로 이러한 정보를 의무적으로 취급합니다.본 프라이버시 정책에 대한 별도의 규정이 있는 경우를 제외하고, 귀하의 사전 허가 없이 본 소프트웨어는 이러한 정보를 외부에 공개하거나 제3자에게 제공하지 않습니다.본 소프트웨어는 본 프라이버시 정책을 불시에 갱신한다.귀하는 본 소프트웨어 서비스 이용 협약에 동의하실 때, 즉 귀하가 본 프라이버시 정책 전체 내용에 동의한 것으로 간주됩니다.본 프라이버시 정책은 본 소프트웨어 서비스 이용 프로토콜의 반드시 필요한 일부분입니다.",
+            line2 : "①적용범위",
+            line3 : "  a) 사용자가 본 소프트웨어 서비스를 사용시, 또한 사용자의 건강정보, 사용하는 언어, 방문일자 및 시간, 소프트, 하드웨어 특징 정보 및 사용자가 원하는 웹 페이지 기록과 같은 데이터를 포함하고, 본 소프트웨어가 자동으로 수신하고 기록하는 사용자의 핸드폰안의 정보를 포함합니다.",
+            line4 : "②정보의 사용",
+            line5 : "  a) 귀하의 데이터를 획득한 후, 본 소프트웨어는 귀하의 차트 데이터를 생성하여 서비스를 더 잘 사용할 수 있도록 서버에 업로드합니다.",
+            line6 : "③개인정보누출",
+            line7 : "  a) 본 소프트웨어는 귀하의 정보를 신뢰받지 않는 제3자에게 공개하지 않습니다.",
+            line8 : "  b) 법률의 관련 규정, 또는 행정 또는 사법기관의 요청에 따라 제3자 또는 행정·사법기관에 공개합니다.",
+            line9 : "  c) 당신이 중국의 관련 법률, 법규 또는 관련 규칙을 위반하는 경우, 제3자에게 정보를 공개해야합니다.",
+            line10 : "④메시지 저장 및 교환",
+            line11 : "  본 소프트웨어가 수집한 귀하에 대한 정보와 자료는 본 소프트웨어 및 (또는) 그 관련 회사의 서버에 저장되며, 이러한 정보와 자료는 귀하가 위치한 국가, 지역 또는 본 소프트웨어가 수집한 정보와 자료가 위치한 곳의 국외에서 저장되고 전시될 수 있습니다.",
+            line12 : "⑤정보 보안",
+            line13 : "  a) 본 소프트웨어의 인터넷 서비스를 사용하여 온라인 거래를 할 경우, 귀하는 연락 방식이나 우편 주소와 같은 자신의 개인 정보를 거래 상대방이나 잠재적 거래 상대방에게 누출 될 위험이 있습니다. 꼭 필요한 경우에만 다른 사람에게 개인정보를  공개하고,  자신의 개인 정보를 적절히 보호하십시오.귀하가 자신의 개인 정보 유출을 발견하면 귀하는 본 소프트웨어가 해당 조치를 취할 수 있도록 본 소프트웨어 고객 서비스에 즉시 연락하십시오.",
+            
+            modal_title : "동의약관",
+            modal1 : "상기 내용에 동의하시면 동의를 클릭하여 본 시스템에 들어가 개인 기본정보 등의 자료를 보완하여 정보를 정확하고 틀림없도록 해주십시오. 개인정보가 변동될 경우 소속 관리자에게 지체 없이 연락하여 변경하시기 바랍니다.",
+
+            agree : "동의",
+            confirm : "확인",
+        };
+        const dict_jp = {
+            line1 : "  本アプリは全ての使用ユーザーの個人プライベートを尊重し保護します。より正確より個性化のサービスを提供するために、本アプリは当プライバシー政策に基づいて規定使用及びあなたの個人情報を公表します。但し本アプリは高度慎重にこれらの情報に対応することに努めます。当プライバシー政策にある別の規定以外、事前に貴方方の許可を得ずに本アプリはこれらの情報を対外あるいは第三者に提供することはありません。本アプリは度々プライバシー政策を更新します。本アプリサービス使用協定書を同意すると、当プライバシー政策の全ての内容に賛成すると見なします。当プライバシー政策は本アプリサービス使用協定に属し、切り離すことはできません。",
+            line2 : "①適用範囲に関して",
+            line3 : "  a)本アプリ使用しているネットワーク通じて、本アプリは携帯にある情報を自動的に受け取るあるいは記録残します。貴方の健康データ、使用言語、訪問日付と時間、ソフト·ハードウエア特徴情報及びホームページの訪問記録データなど含まれます。",
+            line4 : "②情報の使用に関して",
+            line5 : "  a)本アプリはユーザーのデータを読み取った後、サーバーへアップロードし、ユーザーのランキングデータを作成し、よりもっと使いやすくするようにできています。",
+            line6 : "③情報開示に関して",
+            line7 : "  a)本アプリはユーザーの情報を信用されていない第三者へ開示することはありません。",
+            line8 : "  b)法律に関する規定及び行政又は司法機関の要求に基づいて、第三者又は行政又は司法機関に開示することがあります。",
+            line9 : "  c)もしも中国関する法律又は法規又は関連規則に違反した場合、第三者に開示する必要があります。",
+            line10 : "④情報保存及び交換に関して",
+            line11 : "  本アプリで収集した情報は本ソフトウェア及びその関連会社おサーバーに保存されます。これらの情報は貴方の国、地域又は本ソフトウェアによって情報を収集する場所の海外に送られ、海外で訪問、保存、展示されることがあります。",
+            line12 : "⑤情報保護に関して",
+            line13 : "  a)本ソフトウェアのネットワークサービスを利用してオンライン取引を行う場合、連絡先や郵便住所など、取引先または潜在的な取引先に個人情報を開示することは避けられません。自分の個人情報を適切に保護し、必要な場合のみ他人に提供してください。個人情報の漏洩を発見した場合には、直ちに当ソフトウェアカスタマーセンターへご連絡ください。本アプリはすぐに相応の措置を取ります。",
+            
+            modal_title : "同意に関する注意事項 ",
+            modal1 : "もしも貴方は上述内容に同意する場合、「同意」をクリックしてください。当システムへ進み、情報を確認してください。個人情報に変動ある場合には、直ちに所属する管理員へご連絡してください。",
+
+            agree : "同　意",
+            confirm : "確認",
+        };
+        const dictionary = {
+            "zh_cn" : dict_zh_cn,
+            "zh_tw" : dict_zh_tw,
+            "ko" : dict_ko,
+            "jp" : dict_jp,
+        };
+        $(document).ready(function() {
+            var locale = dontCare.decideLocale();
+	
+            $.i18n().locale = locale;
+            $.i18n().load(dictionary).then(
+                function() {
+                    $('html').i18n();
+                }
+            );
+        });
+    </script>
+</head>
+
+<body class="cbp-spmenu-push">
+    <div class="main-content">
+        <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1"
+            style="overflow-y: auto;overflow-x:hidden">
+            <!--left-fixed -navigation-->
+            <aside class="sidebar-left">
+                <nav class="navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <h1>
+                            <a class="navbar-brand" href="userNotice.html">
+                                <span>
+                                    <img src="images/VIP(LOGO).png" height="100%" />
+                                </span>
+                                <span style="margin-left:5px;">9Rise</span>
+                            </a>
+                        </h1>
+                    </div>
+                   
+                </nav>
+            </aside>
+        </div>
+        <!--left-fixed -navigation-->
+
+        <!-- header-starts -->
+        <div class="sticky-header header-section ">
+            <div class="header-left">
+                <!--toggle button start-->
+                <button id="showLeftPush" onclick="window.location.href='userNotice.html'">
+                    <i class="fa fa-arrow-left" ></i>
+                </button>
+                <!--toggle button end-->
+                <div class="profile_details_left" style="width: 85%; float: left; position: absolute; left: 15%;">
+                    <!--notifications of menu start -->
+                    <div class="col-xs-12" style="font-size: 4vmax;text-align: center;">
+                        <span><img src="images/images.png" width="50%">
+                        <span><img src="images/qrcode.png" style="float: right;margin-top: 11px; opacity: 0;" width="50px"></span>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <!--notification menu end -->
+            </div>
+        </div>
+        <!-- //header-ends -->
+        <!-- main content start-->
+        <div id="page-wrapper">
+            <div class="main-page activity_box" style="padding-bottom: 0px;background-color:#fff;">
+                <div class="row bold" style="font-size: 3vmax; padding: 5px;">
+                    <span id="title" style="display: none;"></span>
+                    <div class="before_title">
+                        <span data-i18n="line1"></span><br />
+                    </div>
+                    <br>
+                    <div class="title_text">
+                        <span data-i18n="line2"></span><br />
+                    </div>
+                    <div class="context">
+                        <span data-i18n="line3"></span><br />
+                    </div>
+                    <div class="title_text">
+                        <span data-i18n="line4"></span><br />
+                    </div>
+                    <div class="context">
+                        <span data-i18n="line5"></span><br />
+                    </div>
+                    <div class="title_text">
+                        <span data-i18n="line6"></span><br />
+                    </div>  
+                    <div  class="context">
+                        <span data-i18n="line7"></span><br />
+                        <span data-i18n="line8"></span><br />
+                        <span data-i18n="line9"></span><br />
+                    </div>
+                    <div class="title_text">
+                        <span data-i18n="line10"></span><br />
+                    </div>  
+                    <div class="context">
+                        <span data-i18n="line11"></span><br />
+                    </div>
+                    <div class="title_text"> 
+                        <span data-i18n="line12"></span><br />
+                    </div>
+                    <div class="context">
+                        <span data-i18n="line13"></span><br />
+                        <br />
+                    </div>
+                    <div style="text-align: center; margin: 0 auto;">
+                        <button type="button" class="btn btn-success" style="font-size: 20px;" onclick="agree();" data-i18n="agree"></button>
+                        <!-- <button type="button" class="btn btn-danger" style="font-size: 20px;" onclick="disagree();">不同意</button> -->
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <div class="footer">
+            <p>&copy; 2020-2022 京阳(南京) Kinyoung All Rights Reserved.
+            </p>
+        </div>
+        <!--//footer-->
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" data-i18n="modal_title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p data-i18n="modal1"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="confirm();" data-i18n="confirm"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--scrolling js-->
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/scripts.js"></script>
+    <!--//scrolling js-->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js"> </script>
+    <!-- //Bootstrap Core JavaScript -->
+
+    <script type="text/javascript">
+        //目前 #title 是 display:none...... [攤手]
+        $(document).ready(function() {
+            var msg = "尊敬的" + getLocalStorageItem("patient_name");
+            if(getLocalStorageItem("patient_gender") === "F")
+                msg += "女士：";
+            else 
+                msg += "先生：";
+            $("#title").html(msg);
+        });
+
+        var agree = function() {
+            $("#myModal").modal("show");
+        }
+
+        var disagree = function() {
+            window.location = "./login.html";
+        }
+
+        var confirm = function() {
+            setLocalStorageItem(getLocalStorageItem("uid") + "_notice", "yes");
+            window.location = "./Home.html";
+        }
+    </script>
+
+</body>
+
+</html>

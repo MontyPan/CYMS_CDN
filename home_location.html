@@ -1,0 +1,399 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body,
+		html,
+		#allmap {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0;
+			font-family: "微软雅黑";
+		}
+	</style>
+
+
+	<title data-i18n="browser_locate"></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<!-- Custom CSS -->
+<link href="css/pageStyle.css" rel='stylesheet' type='text/css' />
+
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+<!-- Custom CSS -->
+<link href="css/healthCheck_style.css" rel='stylesheet' type='text/css' />
+
+<!-- font-awesome icons CSS -->
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- //font-awesome icons CSS-->
+
+<!-- side nav css file -->
+<link href='css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css' />
+<!-- //side nav css file -->
+
+
+	<link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+
+	<!-- js-->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+
+	<!--webfonts-->
+	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext"
+		rel="stylesheet">
+	<!--//webfonts-->
+
+	<!-- chart -->
+	<script src="js/Chart.js"></script>
+	<!-- //chart -->
+
+	<!-- Metis Menu -->
+	<script src="js/metisMenu.min.js"></script>
+	<!--//Metis Menu -->
+
+	<script src="js/setting.js"></script>
+	<script src="js/custom.js"></script>
+
+	<!--pie-chart -->
+	<!-- index page sales reviews visitors pie chart -->
+	<script src="js/pie-chart.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+		});
+
+	</script>
+	<!-- //pie-chart -->
+	<!-- index page sales reviews visitors pie chart -->
+
+	<!-- requried-jsfiles-for owl -->
+	<link href="css/owl.carousel.css" rel="stylesheet">
+	<script src="js/owl.carousel.js"></script>
+	<!--<!--<script>
+        $(document).ready(function () {
+            // $("#owl-demo").owlCarousel({
+            //     items: 3,
+            //     lazyLoad: true,
+            //     autoPlay: true,
+            //     pagination: true,
+            //     nav: true,
+            // });
+        });
+    </script>-->
+	<script language='javascript'>
+		$(function () {
+			$('#test').click(function () {
+				$('#page-wrapper').animate({ scrollTop: $('#ttest').offset().top }, 800);
+			}); //代表一個完整的執行區塊
+		});
+	</script>
+	<script src="js/physical.js" type="text/javascript"></script>
+	<script src="js/modal.js" type="text/javascript"></script>
+	<link href="css/modal.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/numPad.css">
+	<script type="text/javascript" src='js/jquery-1.12.4.min.js'></script>
+	<script type="text/javascript" src="js/numKeyBoard.js"></script>
+	<!-- //requried-jsfiles-for owl -->
+
+	<script type="text/javascript"
+		src="https://api.map.baidu.com/api?v=2.0&ak=ZKD67I7AyqRnSkVbaVSshkQfiG9ipHsy"></script>
+
+	<!-- i18n -->
+	<script src="js/DontCareCommon.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.messagestore.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.parser.min.js"></script>
+	<script>
+		$(document).ready(function() { prepareI18N(); } );
+	</script>
+</head>
+
+<body class="cbp-spmenu-push" onload="add_control();">
+	<div class="main-content">
+		<!-- header-starts -->
+		<div class="sticky-header header-section ">
+			<div class="header-left">
+				<!--toggle button start-->
+				<button id="showLeftPush" onclick="window.location.href='Home.html'">
+					<i class="fa fa-arrow-left"></i>
+				</button>
+				<!--toggle button end-->
+				<div class="profile_details_left" style="width: 85%; float: left; position: absolute; left: 15%;">
+					<!--notifications of menu start -->
+					<div class="col-xs-12" style="font-size: 4vmax;text-align: center;">
+						<span><img src="images/images.png" width="50%">
+							<span><img src="images/qrcode.png" style="float: right;margin-top: 11px; opacity: 0;"
+									width="50px"></span>
+							<div class="clearfix"> </div>
+					</div>
+				</div>
+
+				<!--notification menu end -->
+				<div class="clearfix">
+				</div>
+			</div>
+
+
+			<div class="clearfix"> </div>
+		</div>
+		<div id="page-wrapper">
+			<div class="main-page">
+				<div style="height:5%"><span id="location" style="text-align:center; display:block;"></span></div>
+				<div style="height:5%"><button id="editbutton" onclick="update_location()" data-i18n="update_location"></button>
+					<button id="reloadbutton" onclick="reload_location()" data-i18n="reload_location"></button></div>
+				<div id="allmap" style="height:90%"></div>
+			</div>
+		</div>
+	</div>
+	<div style="height:3%"></div>
+	<!--footer-->
+	<div class="footer">
+		<p>&copy; 2020-2022 京阳(南京) Kinyoung All Rights Reserved.
+		</p>
+	</div>
+	<!--//footer-->
+	
+</body>
+
+</html>
+<script type="text/javascript">
+
+	//按鈕預設隱藏
+	document.getElementById("editbutton").style.display = "none";
+	document.getElementById("reloadbutton").style.display = "none";
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	// < !-- var point = new BMap.Point(116.404, 39.915); -->
+	// < !--map.centerAndZoom(point, 20); -->
+
+		// 编写自定义函数,创建标注
+		function addMarker(point) {
+			var marker = new BMap.Marker(point);
+			map.addOverlay(marker);
+		}
+
+	var data = {};
+	data.uid = getLocalStorageItem("uid");
+	var url = api_url + "/cyms/return_home_location.php";
+	$.ajax({
+		type: "POST",
+		data: { "requestObject": JSON.stringify(data) },
+		dataType: "json",
+		url: url,
+		success: function (data) {
+			console.log(data);
+			//有设定过住家座标
+			if (data.success === 200) {
+				document.getElementById("location").innerHTML = $.i18n("home_location");
+				if (data.objects.length > 0) {
+
+					var point = new BMap.Point(data.objects[0].longitude, data.objects[0].latitude);
+					map.centerAndZoom(point, 20);
+
+					var marker = new BMap.Marker(point);
+					map.addOverlay(marker);              // 将标注添加到地图中
+					var label = new BMap.Label($.i18n("home"), { offset: new BMap.Size(20, -10) });
+					label.setStyle({
+                                "max-width" : "none"
+                            });
+					marker.setLabel(label);
+					addMarker(point);
+				}
+				document.getElementById("reloadbutton").style.display = "block";
+
+			}
+			//查无住家座标
+			else if (data.success === 0) {
+				var geolocation = new BMap.Geolocation({
+					maximumAge: 10  // 清除缓存
+				});
+				geolocation.getCurrentPosition(function (r) {
+					if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+
+
+						var mk = new BMap.Marker(r.point);
+						map.addOverlay(mk);
+						map.panTo(r.point);
+						map.centerAndZoom(r.point, 20);
+
+
+						document.getElementById("location").innerHTML = $.i18n("set_location_as_home", r.point.lng, r.point.lat);
+						//alert('您的位置：'+r.point.lng+','+r.point.lat);
+
+
+						var sJson = JSON.stringify
+							({
+								uid: getLocalStorageItem("uid"),
+								longitude: r.point.lng,
+								latitude: r.point.lat,
+								upload_time: dateFormat(),
+								action: "insert",
+							});
+
+						$.ajax({
+							type: "POST",
+							data: { "requestObject": sJson },
+							dataType: "json",
+							url: api_url + "/cyms/insert_home_location.php",
+							success: function (data) {
+								// $("#messageModal").modal("show");												
+								console.log(data);
+							},
+						})
+					}
+					else {
+
+						//关于状态码    
+						//BMAP_STATUS_SUCCESS   检索成功。对应数值“0”。    
+						//BMAP_STATUS_CITY_LIST 城市列表。对应数值“1”。    
+						//BMAP_STATUS_UNKNOWN_LOCATION  位置结果未知。对应数值“2”。    
+						//BMAP_STATUS_UNKNOWN_ROUTE 导航结果未知。对应数值“3”。    
+						//BMAP_STATUS_INVALID_KEY   非法密钥。对应数值“4”。    
+						//BMAP_STATUS_INVALID_REQUEST   非法请求。对应数值“5”。    
+						//BMAP_STATUS_PERMISSION_DENIED 没有权限。对应数值“6”。(自 1.1 新增)    
+						//BMAP_STATUS_SERVICE_UNAVAILABLE   服务不可用。对应数值“7”。(自 1.1 新增)    
+						//BMAP_STATUS_TIMEOUT   超时。对应数值“8”。(自 1.1 新增)    
+						switch (this.getStatus()) {
+							case 2:
+								alert($.i18n("locate_fail"));
+								break;
+							case 3:
+								alert($.i18n("navigate_fail"));
+								break;
+							case 4:
+								alert($.i18n("illegal_key_fail"));
+								break;
+							case 5:
+								alert($.i18n("ilegal_request_fail"));
+								break;
+							case 6:
+								alert($.i18n("no_authority_fail"));
+								break;
+							case 7:
+								alert($.i18n('no_service_fail'));
+								break;
+							case 8:
+								alert($.i18n('time_out_fail'));
+								break;
+
+						}  
+						// < !--alert('failed' + this.getStatus()); -->
+					}
+				}, { enableHighAccuracy: true })
+			}
+			else {
+				//setEmptyList();
+			}
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			//alert("ajax error:" + jqXHR.responseText);
+		}
+	});
+
+
+	var top_left_control = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_TOP_LEFT });// 左上角，添加比例尺
+	var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+	var top_right_navigation = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL }); //右上角，仅包含平移和缩放按钮
+	/*缩放控件type有四种类型:
+	BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮*/
+
+	//添加控件和比例尺
+	function add_control() {
+		map.addControl(top_left_control);
+		map.addControl(top_left_navigation);
+		map.addControl(top_right_navigation);
+	}
+
+	function reload_location() {
+
+		var geolocation = new BMap.Geolocation({
+			maximumAge: 10  // 清除缓存
+		});
+		geolocation.getCurrentPosition(function (r) {
+			if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+
+
+				var mk = new BMap.Marker(r.point);
+				map.addOverlay(mk);
+				map.panTo(r.point);
+				map.centerAndZoom(r.point, 20);
+
+
+				document.getElementById("location").innerHTML = $.i18n("now_location", r.point.lng, r.point.lat);
+			}
+		}, { enableHighAccuracy: true })
+
+		document.getElementById("reloadbutton").style.display = "none";
+		document.getElementById("editbutton").style.display = "block";
+	}
+
+	function update_location() {
+
+		var geolocation = new BMap.Geolocation({
+			maximumAge: 10  // 清除缓存
+		});
+		geolocation.getCurrentPosition(function (r) {
+			if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+
+
+				var mk = new BMap.Marker(r.point);
+				map.addOverlay(mk);
+				map.panTo(r.point);
+				map.centerAndZoom(r.point, 20);
+
+
+				document.getElementById("location").innerHTML = $.i18n("set_location_as_home", r.point.lng, r.point.lat);
+				//alert('您的位置：'+r.point.lng+','+r.point.lat);
+
+
+				var sJson = JSON.stringify
+					({
+						uid: getLocalStorageItem("uid"),
+						longitude: r.point.lng,
+						latitude: r.point.lat,
+						upload_time: dateFormat(),
+						action: "update",
+					});
+
+				$.ajax({
+					type: "POST",
+					data: { "requestObject": sJson },
+					dataType: "json",
+					url: api_url + "/cyms/insert_home_location.php",
+					success: function (data) {
+						// $("#messageModal").modal("show");												
+						console.log(data);
+					},
+				})
+			}
+		}, { enableHighAccuracy: true })
+
+		document.getElementById("editbutton").style.display = "none";
+		document.getElementById("reloadbutton").style.display = "none";
+	}
+
+
+
+
+
+	function dateFormat() {
+		var time = new Date();
+		var Y = time.getFullYear();
+		var M = (time.getMonth() + 1);
+		var D = time.getDate();
+		return Y + "-" + ((M + 1) < 10 ? '0' : '') + M + "-" + ((D + 1) < 10 ? '0' : '') + D;
+	};
+
+</script>
